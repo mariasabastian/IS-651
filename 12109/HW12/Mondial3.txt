@@ -1,0 +1,22 @@
+QUERY 1:
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+ select ?A
+ from <http://www.dbis.informatik.uni-goettingen.de/Mondial/Mondial-RDF/mondial-meta.n3>
+ from <http://www.dbis.informatik.uni-goettingen.de/Mondial/Mondial-RDF/mondial-europe.n3>
+ where {?A rdf:type mon:Country}
+
+
+
+QUERY 2:
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+ select ?X ?Y ?Z
+ from <http://www.dbis.informatik.uni-goettingen.de/Mondial/Mondial-RDF/mondial-europe.n3>
+ where {?X rdf:type mon:Country .
+?X mon:name ?Y .
+?X mon:population ?Z . 
+FILTER (?Z > 10000000)
+}

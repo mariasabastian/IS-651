@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<maria:schema elementFormDefault="qualified" 
+targetNamespace="http://userpages.umbc.edu/~mariaps1" 
+xmlns:maria="http://www.w3.org/2001/XMLSchema">
+<maria:element name="HW2">
+<maria:complexType>
+<maria:sequence>
+<maria:element name="Resume">
+<maria:complexType>
+<maria:sequence>
+<maria:element name="personal_details">
+<maria:complexType>
+<maria:sequence>
+<maria:element type="maria:string" name="Name"/>
+<maria:element name="Address">
+<maria:complexType>
+<maria:sequence>
+<maria:element type="maria:string" name="Line1"/>
+<maria:element type="maria:string" name="line2"/>
+<maria:element type="maria:string" name="city"/>
+<maria:element type="maria:string" name="country"/>
+<maria:element type="maria:short" name="zip"/>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+<maria:element name="PhoneNumber">
+<maria:complexType>
+<maria:simpleContent>
+<maria:extension base="maria:string">
+<maria:attribute type="maria:long" name="Phone"/>
+</maria:extension>
+</maria:simpleContent>
+</maria:complexType>
+</maria:element>
+<maria:element name="Email">
+<maria:complexType>
+<maria:simpleContent>
+<maria:extension base="maria:string">
+<maria:attribute type="maria:string" name="Primary"/>
+</maria:extension>
+</maria:simpleContent>
+</maria:complexType>
+</maria:element>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+<maria:element name="Education">
+<maria:complexType>
+<maria:sequence>
+<maria:element name="Qualification">
+<maria:complexType>
+<maria:sequence>
+<maria:element type="maria:string" name="Degree"/>
+<maria:element type="maria:float" name="GPA"/>
+<maria:element type="maria:short" name="Year"/>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+<maria:element name="Experience">
+<maria:complexType>
+<maria:sequence>
+<maria:element name="Job" maxOccurs="unbounded" minOccurs="0">
+<maria:complexType>
+<maria:sequence>
+<maria:element type="maria:string" name="Organisation"/>
+<maria:element type="maria:string" name="Duration"/>
+<maria:element type="maria:string" name="Role"/>
+<maria:element type="maria:string" name="Project"/>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+<maria:element name="EducationalAchievement">
+<maria:complexType>
+<maria:sequence>
+<maria:element name="Achievement" maxOccurs="unbounded" minOccurs="0">
+<maria:complexType>
+<maria:sequence>
+<maria:element type="maria:string" name="Title"/>
+<maria:element type="maria:short" name="Date"/>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+<maria:element name="Skills">
+<maria:complexType>
+<maria:sequence>
+<maria:element type="maria:string" name="Technical"/>
+<maria:element type="maria:string" name="Other"/>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+<maria:element type="maria:string" name="validation"/>
+</maria:sequence>
+</maria:complexType>
+</maria:element>
+</maria:schema>

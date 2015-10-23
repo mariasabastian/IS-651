@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE HW2
+[
+<!ELEMENT HW2 (Resume, Validation)>
+<!ELEMENT Resume (PersonalDetails, Qualifications?, jobs+)>
+
+<!ELEMENT PersonalDetails (Name,Address,EmailID,Phonenumber,Objective)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT EmailID (#PCDATA)>
+<!ELEMENT Phonenumber (#PCDATA)>
+<!ELEMENT Objective (#PCDATA)>
+
+<!ELEMENT Qualifications (Academic)*>
+<!ELEMENT Academic (#PCDATA|CourseName|Degreedate)*>
+<!ELEMENT CourseName (#PCDATA)>
+<!ELEMENT Degreedate (#PCDATA)>
+
+
+<!ELEMENT jobs (job)*>
+<!ELEMENT job (#PCDATA|Company)*>
+<!ELEMENT Company (#PCDATA)>
+
+
+<!ELEMENT Validation (#PCDATA)>
+<!ATTLIST job description CDATA #REQUIRED>
+<!ATTLIST Academic University CDATA #REQUIRED>
+]>
+
+
+<HW2>
+<Resume>
+
+<PersonalDetails> 
+	<Name> Sabastian Maria Priyanka </Name>
+	<Address> 4801 Westland Blvd Apt B Arbutus, Baltimore, MD 21227 </Address>
+	<EmailID>mariaps1@umbc.edu</EmailID>
+	<Phonenumber> 6099039324 </Phonenumber>
+	<Objective>
+		Seeking a suitable and challenging position in the field of Information Technology by which I can			leverage my skill andeducation 
+	</Objective>
+</PersonalDetails>
+
+<Qualifications>
+
+	<Academic University="Mumbai University"> 	
+	<CourseName> BE-Computer Engineering </CourseName>
+	<Degreedate> Aug 2011 </Degreedate>	
+	</Academic>
+
+	<Academic University="UMBC">
+	<CourseName> Master's in Information System </CourseName>
+	<Degreedate> Aug 2013 </Degreedate>	
+	</Academic>
+
+</Qualifications>
+
+<jobs>
+		<job description="Student Assistant">
+		<Company> Philosophy </Company>
+		</job>
+
+		<job description="Web Master"> 
+		<Company> UMBC </Company>
+		</job>
+
+		<job description="Database Associate">
+		<Company> IBM </Company>
+		</job>
+	</jobs>
+	
+	<Validation>
+xmllint --valid --noout resume1.xml "My resume is Validated"
+</Validation>
+
+</Resume>
+</HW2>

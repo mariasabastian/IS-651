@@ -1,0 +1,14 @@
+
+Trying 130.85.90.95...
+Connected to zaad2.umbc.edu.
+Escape character is '^]'.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>501 Method Not Implemented</title>
+</head><body>
+<h1>Method Not Implemented</h1>
+<p>GET/HTTP/1.0 to /index.html not supported.<br />
+</p>
+<hr>
+<address>Apache/2.2.22 (Ubuntu) Server at zaad2.umbc.edu Port 80</address>
+</body></html>

@@ -1,0 +1,40 @@
+linux3[23]% cat xqe1.xq
+for $x in doc("catalog.xml")/catalog/cd where $x/price>10 order by $x/title return $x/title
+
+linux3[24]% cat xqf1.xq
+<ul> { for $x in doc("catalog.xml")/catalog/cd/title order by $x return <li>{$x}</li> } </ul>
+
+linux3[25]% cat xqg1.xq
+<ul> { for $x in doc("catalog.xml")/catalog/cd/title order by $x return <li>{data($x)}</li> } </ul>
+
+linux3[26]% cat xqh1.xq
+for $x in doc("catalog.xml")/catalog/cd return if ($x/year<'1990')then <old>{data($x/title)}</old> else <new>{data($x/title)}</new>
+
+linux3[27]% java -cp ../saxon9he.jar net.sf.saxon.Query -q:xqe1.xq
+<?xml version="1.0" encoding="UTF-8"?><title>1999 Grammy Nominees</title><title>Black angel</title><title>Empire Burlesque</title><title>One night 
+only</title><title>Romanza</title><title>Still got the blues</title>
+
+linux3[28]% java -cp ../saxon9he.jar net.sf.saxon.Query -q:xqf1.xq
+<?xml version="1.0" encoding="UTF-8"?><ul><li><title>1999 Grammy Nominees</title></li><li><title>Big Willie style</title></li><li><title>Black 
+angel</title></li><li><title>Bridge of Spies</title></li><li><title>Empire Burlesque</title></li><li><title>Eros</title></li><li><title>For the good 
+times</title></li><li><title>Greatest Hits</title></li><li><title>Hide your heart</title></li><li><title>Maggie May</title></li><li><title>Midt om 
+natten</title></li><li><title>One night only</title></li><li><title>Pavarotti Gala Concert</title></li><li><title>Picture book</title></li><li><title>Private 
+Dancer</title></li><li><title>Red</title></li><li><title>Romanza</title></li><li><title>Soulsville</title></li><li><title>Still got the 
+blues</title></li><li><title>Stop</title></li><li><title>Sylvias Mother</title></li><li><title>The dock of the bay</title></li><li><title>The very best 
+of</title></li><li><title>Tupelo Honey</title></li><li><title>Unchain my heart</title></li><li><title>When a man loves a woman</title></li></ul>
+
+linux3[29]% java -cp ../saxon9he.jar net.sf.saxon.Query -q:xqg1.xq
+<?xml version="1.0" encoding="UTF-8"?><ul><li>1999 Grammy Nominees</li><li>Big Willie style</li><li>Black angel</li><li>Bridge of Spies</li><li>Empire 
+Burlesque</li><li>Eros</li><li>For the good times</li><li>Greatest Hits</li><li>Hide your heart</li><li>Maggie May</li><li>Midt om natten</li><li>One night 
+only</li><li>Pavarotti Gala Concert</li><li>Picture book</li><li>Private Dancer</li><li>Red</li><li>Romanza</li><li>Soulsville</li><li>Still got the 
+blues</li><li>Stop</li><li>Sylvias Mother</li><li>The dock of the bay</li><li>The very best of</li><li>Tupelo Honey</li><li>Unchain my heart</li><li>When a man 
+loves a woman</li></ul>
+
+linux3[30]% java -cp ../saxon9he.jar net.sf.saxon.Query -q:xqh1.xq
+<?xml version="1.0" encoding="UTF-8"?><old>Empire Burlesque</old><old>Hide your heart</old><old>Greatest Hits</old><new>Still got the 
+blues</new><new>Eros</new><new>One night only</new><old>Sylvias Mother</old><new>Maggie May</new><new>Romanza</new><old>When a man loves a woman</old><new>Black 
+angel</new><new>1999 Grammy Nominees</new><new>For the good times</new><new>Big Willie style</new><old>Tupelo Honey</old><new>Soulsville</new><new>The very best 
+of</new><old>Stop</old><old>Bridge of Spies</old><old>Private Dancer</old><old>Midt om natten</old><new>Pavarotti Gala Concert</new><old>The dock of the 
+bay</old><old>Picture book</old><old>Red</old><old>Unchain my heart</old>
+
+

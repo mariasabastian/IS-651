@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resume 
+[
+<!ELEMENT resume (Info, qualification?, wrkexp, eduachievement, validation)>
+<!ELEMENT Info (name, address, phoneno)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (houseno, area, city)>
+<!ATTLIST address type CDATA #REQUIRED>
+<!ELEMENT phoneno (#PCDATA)>
+<!ELEMENT houseno (#PCDATA)>
+<!ELEMENT area (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT qualification (school+)>
+<!ELEMENT school (schoolname, degree)>
+<!ATTLIST school category CDATA #REQUIRED>
+<!ELEMENT schoolname (#PCDATA)>
+<!ELEMENT degree (#PCDATA)>
+<!ELEMENT wrkexp (company+)>
+<!ELEMENT company (companyloc, desgn)>
+<!ELEMENT companyloc (companyname)>
+<!ELEMENT companyname (#PCDATA)>
+<!ATTLIST location location CDATA #REQUIRED>
+<!ELEMENT desgn (#PCDATA)>
+<!ELEMENT eduachievement (award+)>
+<!ELEMENT award (awardDetails)>
+<!ELEMENT awardDetails (#PCDATA)>
+<!ELEMENT validation (#PCDATA)>
+<!ENTITY validate "xmllint --valid --noout resume.xml">
+]>
+
+
+<resume>
+	<Info>
+		<name>Maria</name>
+		<address type="home1">
+			<houseno>Westland Blvd</houseno>
+			<area>Arbutus</area>
+			<city>Baltimore</city>	
+		</address>
+		<phoneno>456545654</phoneno>
+	</Info>
+
+	<qualification>
+
+		<school category="A">
+			<schoolname>VTU</schoolname>
+			<degree>&lt;Bachelor of Engineering &gt;</degree>
+		</school>
+
+	</qualification>
+
+	<wrkexp>
+
+		<company>
+			<companyloc location="Bangalore">
+				<companyname>Accenture</companyname>
+			</companyloc>
+			<desgn>developer</desgn>
+		</company>
+
+		<company>
+			<companyloc location="Bangalore">
+				<companyname>Vodafone</companyname>
+			</companyloc>
+			<desgn> developer</desgn>
+		</company>
+		
+		<company>
+			<companyloc location="Bangalore">
+				<companyname>Wipro</companyname>
+			</companyloc>
+			<desgn>Engineer</desgn>
+		</company>
+	</wrkexp>
+
+	<eduachievement>
+	
+		<award>
+			<awardDetails>Best Seminar Topic</awardDetails>
+		</award>
+
+		<award>
+			<awardDetails>Best Project</awardDetails>
+		</award>
+	</eduachievement>
+
+	<validation>
+	&validate;
+	</validation>
+
+</resume>

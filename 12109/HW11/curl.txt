@@ -1,0 +1,96 @@
+linux3[1]% cd www/is651/12109/HW10/
+linux3[3]% ls
+any.php  cdc.php  cd.php  cdx.php  ci  lib  services.php  TOCHW10.html
+</cdStore>
+
+linux3[10]DELETE "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2/index/3"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<message>Deleted!</message>
+</cdStore>
+
+linux3[11]% curl -X DELETE "http://userpages.umbc.edu/~mariaps1/is651//ci/index.php?/rest2/index/4"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<message>Deleted!</message>
+</cdStore>
+
+linux3[12]POST "http://userpages.umbc.edu/~mariaps1/is651//ci/index.php?/rest2/" -d "artist=PinkFloyd&title=xyz&genre=rock"
+<?xml version='1.0' encoding='utf-8'?><cdStore><message>Added!</message>
+</cdStore>
+
+</cdStore>
+
+
+linux3[20]curl -X POST "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2/" -d "artist=GunsnRoses&title=lmn&genre=rock"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<message>Added!</message>
+</cdStore>
+
+linux3[21]% curl -X POST "http://userpages.umbc.edu/~mariaps1/is651/12i/index.php?/rest2/" -d "artist=BryanAdams&title=POQ&genre=rock"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<message>Added!</message>
+
+
+linux3[22]% curl -X GET "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2/index/1
+Unmatched ".
+linux3[23]% curl -X GET "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<0>
+        <id>1</id>
+        <artist>Led</artist>
+        <title>abc</title>
+        <genre>rock</genre>
+</0>
+<1>
+        <id>2</id>
+        <artist>PinkFloyd</artist>
+        <title>ghi</title>
+        <genre>rock</genre>
+</1>
+<2>
+        <id>4</id>
+        <artist>GunsnRoses</artist>
+        <title>lmn</title>
+        <genre>rock</genre>
+</2>
+<3>
+        <id>5</id>
+        <artist>GunsnRoses</artist>
+        <title>lmn</title>
+        <genre>rock</genre>
+</3>
+<4>
+        <id>6</id>
+        <artist>BryanAdams</artist>
+        <title>POQ</title>
+        <genre>rock</genre>
+</4>
+</cdStore>linux3[24]% curl -X GET "http://userpages.umbc.edu/~mariaps1/is651/121/index.php?/rest2/index/1"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<id>1</id>
+<artist>Led</artist>
+<title>abc</title>
+<genre>rock</genre>
+</cdStore>
+
+
+linux3[26]% curl -X PUT "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2/index/4" -d "artist=SteveWonders&title=uvw&genre=classicrock"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<id>4</id>
+<message>Edited!</message>
+</cdStore>
+
+
+linux3[28]% curl -X PATCH "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2/index/4" -d "artist=PhilCollins"
+
+linux3[29]% curl -X DELETE "http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/ci/index.php?/rest2/index/2"
+<?xml version='1.0' encoding='utf-8'?>
+<cdStore>
+<message>Deleted!</message>
+</cdStore>linux3[30]%

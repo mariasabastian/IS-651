@@ -1,0 +1,1 @@
+<ul> { for $x in doc("bookstore.xml")/bookstore/book/title order by $x return <li>{$x}</li> } </ul>

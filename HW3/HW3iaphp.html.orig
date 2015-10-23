@@ -1,0 +1,11 @@
+<html>
+<body>
+
+<form action="Hello.php" method="post">
+Company: <input type="text" name="campanyname">
+Designation: <input type="text" name="designation">
+<input type="submit">
+</form>
+
+</body>
+</html>

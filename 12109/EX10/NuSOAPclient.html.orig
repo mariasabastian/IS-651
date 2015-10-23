@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HTML form for Shakespeare web service</title>
+</head>
+<body>
+    <h2>GetSpeech</h2>
+    <p>
+    GetSpeech requires a string formatted phrase from one of Shakespeare's plays as input. The speech, speaker, and play will be returned as an XML string. Sample Shakespeare Phrases: To be, or not to be | My kingdom for a horse | Get thee to a nunnery | ... 
+    </p>
+    <h3>HTML Form for Shakespeare Web Service</h3>
+    <form action="NuSOAP.php" method="get"><!--1. http GET method -->
+        Enter a line: <input type="text" size="40" name="sline" /><!--2. parameter -->
+        <input type="submit" />
+    </form>
+</body>
+</html>

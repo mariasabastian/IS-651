@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="smphw5.xsl"?>
+
+<HW2
+xmlns="http://userpages.umbc.edu/~mariaps1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://userpages.umbc.edu/~mariaps1 smphw5.xsd"
+>
+<Resume>
+<personal_details>
+<Name>Maria Priyanka </Name>
+<Address>
+<Line1> 4801 Westland Blvd </Line1>
+<line2> Apt B</line2>
+<city> Arbutus </city>
+<country> USA </country>
+<zip>21227</zip>
+</Address>
+<PhoneNumber Phone="2165718116">  </PhoneNumber>
+<Email Primary="mariaps1@umbc.edu"> </Email>	
+</personal_details>
+<Education>
+<Qualification>
+<Degree>Masters In Information Systems</Degree>
+<GPA>3.25</GPA>
+<Year>2014</Year>
+</Qualification>
+</Education>
+<Experience>
+<Job>
+<Organisation>TOCE</Organisation>
+<Duration>2 years</Duration>
+<Role>Developer</Role>
+<Project>Finance Management</Project>
+</Job>
+<Job>
+<Organisation>Accenture</Organisation>
+<Duration>3 Years</Duration>
+<Role>Design Architect</Role>
+<Project>Project Management web</Project>
+</Job>
+<Job>
+<Organisation>TCS</Organisation>
+<Duration>1 Year</Duration>
+<Role>Web Developer</Role>
+<Project>Website mangement</Project>
+</Job>
+</Experience>
+<EducationalAchievement>
+<Achievement>
+<Title>best student in Undergrad</Title>
+<Date>2012</Date>
+</Achievement>
+<Achievement>
+<Title>Seminar in MEMS</Title>
+<Date>2012</Date>
+</Achievement>
+</EducationalAchievement>
+<Skills>
+<Technical>c++, JAVA, PHP, SQL</Technical>
+<Other>Communication skills, Good manager,Leadership qualities</Other>
+</Skills>
+</Resume>
+<validation>
+xmllint --valid --noout smp.xml "My Resume is Validated"
+</validation>
+</HW2>

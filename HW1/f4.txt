@@ -1,0 +1,128 @@
+login as: mariaps1
+WARNING: UNAUTHORIZED ACCESS to this computer is in violation of Criminal
+         Law Article section 8-606 and 7-302 of the Annotated Code of MD.
+
+NOTICE:  This system is for the use of authorized users only.
+         Individuals using this computer system without authority, or in
+         excess of their authority, are subject to having all of their
+         activities on this system monitored and recorded by system
+         personnel.
+
+mariaps1@gl.umbc.edu's password:
+Access denied
+mariaps1@gl.umbc.edu's password:
+Last login: Sat Feb  2 10:26:22 2013 from c-69-143-92-224.hsd1.md.comcast.net
+
+  UMBC Division of Information Technology            http://www.umbc.edu/oit
+  --------------------------------------------------------------------------
+  If you have any questions or problems regarding these systems, please call
+  the DoIT Helpdesk at 410-455-3838, or submit your request on the web by
+  visiting http://my.umbc.edu/help/request
+
+  Remember that the Division of Information Technology will never ask for
+  your password. Do NOT give out this information under any circumstances.
+  --------------------------------------------------------------------------
+  ATTENTION!! These servers are a shared resource and should not be used
+  for the following:
+
+  - TESTING OR DEVELOPMENT of your applications which utilize the
+    fork() system call. Limit this work to lab workstations or your
+    personal systems.
+
+  - TESTING OR DEVELOPMENT of your broadcast or multicast-based
+    applications. These should be developed in an isolated environment.
+
+  As of April 1, 2010, email is no longer allowed to be sent from this
+  system. For more information see our Release Notes:
+
+  http://wiki.umbc.edu/display/CIG/OIT+Linux+Environment+Release+Notes
+
+linux3[1]% pwd
+/afs/umbc.edu/users/m/a/mariaps1/home
+linux3[2]% cd www/
+linux3[3]% pwd
+/afs/umbc.edu/users/m/a/mariaps1/pub/www
+linux3[4]% ls -lrt
+total 10
+-rw------- 1 mariaps1 rpc 5087 Aug  1  2007 f3.html
+-rw------- 1 mariaps1 rpc  245 Jan 29 20:47 sort.txt
+-rw------- 1 mariaps1 rpc  105 Jan 29 20:58 pc.txt
+-rw-----w- 1 mariaps1 rpc   76 Feb  1 18:54 f2.txt
+-rw------- 1 mariaps1 rpc  426 Feb  2 10:48 f4.txt
+-rw-r--r-- 1 mariaps1 rpc   20 Feb  2 11:08 TEST1.txt
+linux3[5]% rm f2.txt
+rm: remove regular file `f2.txt'? y
+linux3[6]% ls -lrt
+total 9
+-rw------- 1 mariaps1 rpc 5087 Aug  1  2007 f3.html
+-rw------- 1 mariaps1 rpc  245 Jan 29 20:47 sort.txt
+-rw------- 1 mariaps1 rpc  105 Jan 29 20:58 pc.txt
+-rw------- 1 mariaps1 rpc  426 Feb  2 10:48 f4.txt
+-rw-r--r-- 1 mariaps1 rpc   20 Feb  2 11:08 TEST1.txt
+linux3[7]% rm f3.html
+rm: remove regular file `f3.html'? y
+linux3[8]% rm f4.txt
+rm: remove regular file `f4.txt'? y
+linux3[9]% rm f1.txt
+rm: cannot remove `f1.txt': No such file or directory
+linux3[10]% rm ../f1.txt
+rm: remove regular file `../f1.txt'? y
+linux3[11]% pwd
+/afs/umbc.edu/users/m/a/mariaps1/pub/www
+linux3[12]% pico f1.txt
+linux3[13]% pico f2.txt
+linux3[14]% wget  http://userpages.umbc.edu/~canfield/meta.html .
+--2013-02-03 14:58:06--  http://userpages.umbc.edu/~canfield/meta.html
+Resolving userpages.umbc.edu... 130.85.24.44
+Connecting to userpages.umbc.edu|130.85.24.44|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5087 (5.0K) [text/html]
+Saving to: âmeta.htmlâ
+
+100%[======================================>] 5,087       --.-K/s   in 0s
+
+2013-02-03 14:58:07 (259 MB/s) - âmeta.htmlâ
+
+--2013-02-03 14:58:07--  http://./
+Resolving .... failed: No address associated with hostname.
+wget: unable to resolve host address â.â
+
+Downloaded: 1 files, 5.0K in 0s (259 MB/s)
+linux3[15]% ls
+f1.txt  f2.txt  meta.html  pc.txt  sort.txt  TEST1.txt
+linux3[16]% mv meta.html f3.html
+linux3[17]% ls
+f1.txt  f2.txt  f3.html  pc.txt  sort.txt  TEST1.txt
+linux3[18]% cd  ~
+linux3[19]% pwd
+/afs/umbc.edu/users/m/a/mariaps1/home
+linux3[20]% cd www/
+linux3[21]% ls
+f1.txt  f2.txt  f3.html  pc.txt  sort.txt  TEST1.txt
+linux3[22]% mv f1.txt ../
+linux3[23]% ls
+f2.txt  f3.html  pc.txt  sort.txt  TEST1.txt
+linux3[24]% cd ~
+linux3[25]% ls
+bin  f1.txt  pc.txt  sort.txt  www
+linux3[26]% cd www/
+linux3[27]% ls -lrt
+total 9
+-rw------- 1 mariaps1 rpc 5087 Aug  1  2007 f3.html
+-rw------- 1 mariaps1 rpc  245 Jan 29 20:47 sort.txt
+-rw------- 1 mariaps1 rpc  105 Jan 29 20:58 pc.txt
+-rw-r--r-- 1 mariaps1 rpc   20 Feb  2 11:08 TEST1.txt
+-rw------- 1 mariaps1 rpc   27 Feb  3 14:56 f2.txt
+linux3[28]% ls f2.txt
+f2.txt
+linux3[29]% cat f2.txt
+Iam doing my masters in IS
+linux3[30]% chmod g+w f2.txt
+linux3[31]% ls -lrt
+total 9
+-rw------- 1 mariaps1 rpc 5087 Aug  1  2007 f3.html
+-rw------- 1 mariaps1 rpc  245 Jan 29 20:47 sort.txt
+-rw------- 1 mariaps1 rpc  105 Jan 29 20:58 pc.txt
+-rw-r--r-- 1 mariaps1 rpc   20 Feb  2 11:08 TEST1.txt
+-rw--w---- 1 mariaps1 rpc   27 Feb  3 14:56 f2.txt
+linux3[32]%

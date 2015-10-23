@@ -1,0 +1,76 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<style type="text/css">
+
+body
+{
+background-color:white;
+}
+h1
+{
+border-width:2px;
+border-color:white;
+
+border-style:solid;
+color:white;
+text-align:center;
+}
+h2
+{
+border-width:1px;
+border-color:white;
+
+border-style:solid;
+color:white;
+text-align:center;
+}
+
+h3
+{
+border-style:solid;
+border-width:1px;
+border-color:white;
+
+color:Black;
+}
+
+</style>
+</head>
+<body>
+<p> <font size="6" face="bart" color="Black">
+
+	<h1>Table of contents</h1>
+</p>
+<p> <font size="4" face="bart" color="Black">
+	<h2>INDEX</h2>
+</p>
+
+<h3>	<ol>
+		
+		<li><p> <font size="4" face="Times New Roman" color="Black">
+		<a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http%3A%2F%2Fuserpages.umbc.edu%2F~mariaps1%2Fis651%2F12109%2FEX12%2Fex12.rdf">FOAF</a>
+		</p></li>
+		<li><p> <font size="4" face="Times New Roman" color="Black">
+		<a href="http://userpages.umbc.edu/~mariaps1/is651/12109/HW12/Dbpedia1.txt">Dbpedia1</a>
+		</p></li>
+		<li><p> <font size="4" face="Times New Roman" color="Black">
+		<a href="http://userpages.umbc.edu/~mariaps1/is651/12109/HW12/Dbpedia2.txt">Dbpedia2</a>
+		</p></li>
+		<li><p> <font size="4" face="Times New Roman" color="Black">
+		<a href="http://userpages.umbc.edu/~mariaps1/is651/12109/HW12/Mondial1.xml">Mondial1</a>
+		</p></li>
+
+		<li><p> <font size="4" face="Times New Roman" color="Black">
+		<a href="http://userpages.umbc.edu/~mariaps1/is651/12109/HW12/Mondial2.xml">Mondial2</a>
+		</p></li>
+
+		<li><p> <font size="4" face="Times New Roman" color="Black">
+		<a href="http://userpages.umbc.edu/~mariaps1/is651/12109/HW12/Mondial3.txt">Mondial3</a>
+		</p></li>
+      </ol>
+</h3>
+</body>
+
+</html>

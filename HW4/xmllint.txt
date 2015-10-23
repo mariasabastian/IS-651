@@ -1,0 +1,2 @@
+xmllint --noout --valid schema smp.xsd smp.xml
+smp.xml validates

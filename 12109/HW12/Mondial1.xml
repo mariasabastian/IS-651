@@ -1,0 +1,167 @@
+
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="X"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/A/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/AL/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/AND/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/B/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/BG/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/BIH/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/BY/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/CH/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/CY/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/CZ/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/D/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/DK/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/E/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/EW/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/F/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/FARX/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/FL/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/GB/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/GBG/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/GBJ/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/GBM/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/GBZ/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/GR/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/H/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/HR/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/I/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/IRL/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/IS/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/KOS/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/L/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/LT/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/LV/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/M/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/MC/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/MD/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/MK/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/MNE/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/N/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/NL/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/P/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/PL/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/R/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/RO/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/RSM/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/S/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/SF/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/SK/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/SLO/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/SRB/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/SVAX/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/TR/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/UA/</uri></binding>
+  </result>
+  <result>
+   <binding name="X"><uri>http://www.semwebtech.org/mondial/10/countries/V/</uri></binding>
+  </result>
+ </results>
+</sparql>

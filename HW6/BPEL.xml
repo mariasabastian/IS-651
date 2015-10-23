@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Check for availability of Bank Services -->
+<process name="Bank Service"
+targetNamespace="http://userpages.umbc.edu/~mariaps1/HW6/BankServices"
+	xmlns:bwps="http://userpages.umbc.edu/~mariaps1/HW6/BankServices"
+	xmlns="http://schemas.xmlsoap.org/ws/2004/03/business-process/"
+	xmlns:auction="http://userpages.umbc.edu/~mariaps1/HW6/BankServices">
+	<import namespace="http://userpages.umbc.edu/~mariaps1/HW6/BankServices"
+	location="BankService.wsdl" importType="http:// schemas.xmlsoap.org/wsdl/"> </import>
+	
+	<partnerLinks>
+<partnerLink name="BankService" partnerLinkType="bnk:BankServicesRequestingLT" myRole="BankServices" partnerRole="BankServicesRequester"/>
+</partnerLinks>
+<variables>
+<variable name="BankServicesVar" messageType="bnk:POMessage"/>
+<variable name="BankServicesResponseVar" messageType="bnk:BankMessage"/>
+</variables>
+<sequence>
+<receive name="BankServices" partnerLink="BankServicing" portType="bnk:BankPortType" operation="BankServices" variable="BankServicesVar" createInstance="yes"/>
+<if name="checkAvailability">
+<condition>
+starts- with($BankServicesVar.purchaseOrder/orderDescription, 'OrderVal')
+</condition>
+<sequence name="Case1">
+<assign name="Assign1">
+<copy>
+<from>$BankServicesVar.purchaseOrder/orderId</from>
+<to>$BankServicesResponseVar.inventoryPart/orderId</to>
+</copy>
+<copy>
+<from>true()</from>
+<to>
+$BankServicesResponseVar.BankPart/inventoryStatus
+</to>
+</copy>
+<copy>
+<from>'available'</from>
+<to>
+$BankServicesResponseVar.BankPart/BankStatusMessage
+</to>
+</copy>
+</assign>
+</sequence>
+<else>
+<sequence name="Case2">
+<assign name="Assign2">
+<copy>
+<from>$BankServicesVar.purchaseOrder/orderId</from>
+<to>$BankServicesResponseVar.BankPart/orderId</to>
+</copy>
+<copy>
+<from>false()</from>
+<to>
+$BankServicesResponseVar.BankPart/BankStatus
+</to>
+</copy>
+<copy>
+<from>'currently out of cash'</from>
+<to>
+$BankServiceResponseVar.BankPart/ BankStatusMessage
+</to>
+</copy>
+</assign>
+</sequence>
+</else>
+</if>
+<invoke name="BankServicesResponse" partnerLink="BankServicing" portType="bnk:BankServicesCallbackPortType" operation="BankServicesResponse" inputVariable="BankServicesResponseVar"/>
+</sequence>
+</process>

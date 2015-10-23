@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cds" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cds">
+<types>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cds"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+ <xsd:complexType name="cdStoreRequestType">
+  <xsd:all>
+   <xsd:element name="cd" type="xsd:string" form="unqualified"/>
+   <xsd:element name="quant" type="xsd:int" form="unqualified"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="cdStoreResponseType">
+  <xsd:all>
+   <xsd:element name="invoice" type="xsd:string" form="unqualified"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:element name="cdStore" type="tns:cdStoreRequestType"/>
+ <xsd:element name="cdStoreResponse" type="tns:cdStoreResponseType"/>
+</xsd:schema>
+</types>
+<message name="cdStoreRequest">
+  <part name="parameters" element="tns:cdStore" /></message>
+<message name="cdStoreResponse">
+  <part name="parameters" element="tns:cdStoreResponse" /></message>
+<portType name="cdsPortType">
+  <operation name="cdStore">
+    <documentation>Submit a PO for cdStore</documentation>
+    <input message="tns:cdStoreRequest"/>
+    <output message="tns:cdStoreResponse"/>
+  </operation>
+</portType>
+<binding name="cdsBinding" type="tns:cdsPortType">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="cdStore">
+    <soap:operation soapAction="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cds#cdStore" style="document"/>
+    <input><soap:body use="literal" namespace="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cds"/></input>
+    <output><soap:body use="literal" namespace="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cds"/></output>
+  </operation>
+</binding>
+<service name="cds">
+  <port name="cdsPort" binding="tns:cdsBinding">
+    <soap:address location="http://userpages.umbc.edu/~mariaps1/is651/12109/HW10/cd.php"/>
+  </port>
+</service>
+</definitions>

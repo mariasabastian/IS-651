@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE HW2 [
+<!ELEMENT HW2 (Resume+,validation)>
+<!ELEMENT Resume (personal_details+, Education+,Experience+, 
+EducationalAchievement+,Skills+)>
+<!ELEMENT personal_details (Name, Address+, PhoneNumber , Email)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (Line1, line2, city, country,zip)>
+<!ELEMENT Line1 (#PCDATA)>
+<!ELEMENT line2 (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT PhoneNumber (#PCDATA)>
+<!ATTLIST PhoneNumber Phone CDATA "2028122727">
+<!ELEMENT Email (#PCDATA)>
+<!ATTLIST Email Primary CDATA "chait2@umbc.edu">
+<!ELEMENT Education (Qualification?)>
+<!ELEMENT Qualification (Degree, GPA , Year)>
+<!ELEMENT Degree (#PCDATA)>
+<!ELEMENT GPA (#PCDATA)>
+<!ELEMENT Year (#PCDATA)>
+<!ELEMENT Experience (Job+)>
+<!ELEMENT Job (Organisation , Duration ,Role , Project)>
+<!ELEMENT Organisation (#PCDATA)>
+<!ELEMENT Duration (#PCDATA)>
+<!ELEMENT Role (#PCDATA)>
+<!ELEMENT Project (#PCDATA)>
+<!ELEMENT EducationalAchievement (Achievement+)>
+<!ELEMENT Achievement (Title,Date)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT Skills (Technical, Other)>
+<!ELEMENT Technical (#PCDATA)>
+<!ELEMENT Other (#PCDATA)>
+<!ELEMENT validation (#PCDATA)>
+]>
+<HW2>
+	<Resume>
+		<personal_details>
+			<Name>Maria Priyanka </Name>
+			<Address>
+				<Line1> 4801 Westland Blvd </Line1>
+				<line2> Apt B</line2>
+				<city> Arbutus </city>
+				<country> USA </country>
+				<zip>21227</zip>
+			</Address>
+			<PhoneNumber Phone="2165718116">  </PhoneNumber>
+			<Email Primary="mariaps1@umbc.edu"> </Email>
+	
+		</personal_details>
+	
+		<Education>
+			<Qualification>
+				<Degree>Masters In Information Systems</Degree>
+				<GPA>3.25</GPA>
+				<Year>2014</Year>
+			</Qualification>
+		</Education>
+		<Experience>
+			<Job>
+				<Organisation>TOCE</Organisation>
+				<Duration>2 years</Duration>
+				<Role>Developer</Role>
+				<Project>Finance Management</Project>
+			</Job>
+			<Job>
+				<Organisation>Accenture</Organisation>
+				<Duration>3 Years</Duration>
+				<Role>Design Architect</Role>
+				<Project>Project Management web</Project>
+			</Job>
+			<Job>
+				<Organisation>TCS</Organisation>
+				<Duration>1 Year</Duration>
+				<Role>Web Developer</Role>
+				<Project>Website mangement</Project>
+			</Job>
+		</Experience>
+		<EducationalAchievement>
+			<Achievement>
+				<Title>best student in Undergrad</Title>
+				<Date>2012</Date>
+			</Achievement>
+			<Achievement>
+				<Title>Seminar in MEMS</Title>
+				<Date>2012</Date>
+			</Achievement>
+		</EducationalAchievement>
+		<Skills>
+			<Technical>c++, JAVA, PHP, SQL</Technical>
+			<Other>Communication skills, Good manager, 
+Leadership qualities</Other>
+ 		</Skills>
+ 	</Resume>
+ 	<validation>
+ 		 xmllint --valid --noout smp.xml
+  			"My Resume is Validated"
+	 </validation>
+</HW2>
+

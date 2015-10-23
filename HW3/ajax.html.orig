@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#clickit").click(function(){
+    $("#div1").load("input.txt");
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>The Text Here Will Change on Click</h2></div>
+<input type="button" id="clickit" value="Click Here !!!"/>
+
+</body>
+</html>

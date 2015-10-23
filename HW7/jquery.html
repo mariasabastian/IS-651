@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<!--the above doctype is for HTML5-->
+<html>
+<head>
+  <style>img{ height: 100px; float: left; }</style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script><!--this loads the jquery library to simplify the ajax code-->
+</head>
+<body>
+<div id="images"></div><!--this is an empty div that the script below will write to-->
+<script>
+       $.getJSON( // this is a jquery function that simplifies the ajax call for http get and json
+	    "twitter.php", // this is the rest query using the twitter api but put into a curl statment in php on gl
+        function(data){ // this is the callback function that processes the json returned from the twitter call with the data variable
+			//alert(data[0].profile_image_url);
+	     $("<h3>").text("Miss. "+data[0].name).appendTo("#images"); // the next 5 lines create html tags, populate them with json names, and append them to the div above
+	     $("<h4>").text("has Screen Name as : "+data[0].screen_name).appendTo("#images");
+	     $("<h4>").text("and has "+data[0].followers_count+" followers").appendTo("#images"); 
+		 $("<h4>").text("and "+data[0].friends_count+" friends.").appendTo("#images"); 
+         $("<img/>").attr("src", data[0].profile_image_url).appendTo("#images"); // you have to look at the json code to see the json names
+        });
+</script>
+
+</body>
+</html>

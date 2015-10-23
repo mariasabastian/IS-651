@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+ <HEAD>
+  <TITLE>Index of /~mariaps1/is651/12109/HW11/magpie/scripts</TITLE>
+ </HEAD>
+ <BODY>
+<H1>Index of /~mariaps1/is651/12109/HW11/magpie/scripts</H1>
+<PRE><IMG SRC="/icons/blank.gif" ALT="     "> <A HREF="?N=A">Name</A>                    <A HREF="?M=A">Last modified</A>       <A HREF="?S=D">Size</A>  <A HREF="?D=A">Description</A>
+<HR>
+<IMG SRC="/icons/back.gif" ALT="[DIR]"> <A HREF="/~mariaps1/is651/12109/HW11/magpie/">Parent Directory</A>        24-Apr-2013 00:56      -  
+<IMG SRC="/icons/folder.gif" ALT="[DIR]"> <A HREF="smarty_plugin/">smarty_plugin/</A>          24-Apr-2013 00:56      -  
+<IMG SRC="/icons/folder.gif" ALT="[DIR]"> <A HREF="templates/">templates/</A>              24-Apr-2013 00:56      -  
+<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="magpie_simple.php">magpie_simple.php</A>       05-Nov-2005 17:19     1k  
+<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="README">README</A>                  20-Jan-2003 09:15     1k  
+<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="magpie_slashbox.php">magpie_slashbox.php</A>     03-Mar-2003 16:02     1k  
+<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="simple_smarty.php">simple_smarty.php</A>       20-Jan-2003 09:23     2k  
+<IMG SRC="/icons/text.gif" ALT="[TXT]"> <A HREF="magpie_debug.php">magpie_debug.php</A>        05-Nov-2005 17:14     2k  
+</PRE><HR>
+<PRE>
+Some example on how to use Magpie:
+
+* magpie_simple.php *
+  Simple example of fetching and parsing an RSS file. Expects to be
+  called with a query param 'rss_url=http://&lt;some rss file&gt;'
+
+* simple_smarty.php *
+  Similiar to magpie_simple, but using the Smarty template engine to do
+  display.  Also demostrates using rss_utils.inc and a smarty plugin to
+  parse and display when each RSS item was published.
+
+* magpie_debug.php *
+  Displays all the information available from a parsed feed.
+
+* smarty_plugin/modifier.rss_date_parse.php *
+ 
+  A Smarty plugin for parsing RSS style dates.  You must include rss_utils.inc
+  for this plugin to work.  It also must be installed in the Smarty plugin
+  directory, see the Smarty docs for details.
+
+* templates/simple.smarty
+  A Smarty template used by simple_smarty.php which demostrates
+  displaying an RSS feed and using the date parse plugin.
+  
+  
+The Smarty template engine and documentation on how to use it are available from
+http://smarty.php.net
+</PRE>
+</BODY></HTML>

@@ -1,0 +1,80 @@
+linux3[6]% cat xqa.xq
+doc("bookstore.xml")/bookstore/book/title
+
+linux3[7]% cat xqb.xq
+doc("bookstore.xml")/bookstore/book[price<30]
+
+linux3[8]% cat xqc.xq
+doc("bookstore.xml")/bookstore/book[price>30]/title
+
+linux3[9]% cat xqd.xq
+for $x in doc("bookstore.xml")/bookstore/book where $x/price>30 return $x/title
+
+linux3[10]% cat xqe.xq
+for $x in doc("bookstore.xml")/bookstore/book where $x/price>30 order by $x/title return $x/title
+
+linux3[11]% cat xqf.xq
+<ul> { for $x in doc("bookstore.xml")/bookstore/book/title order by $x return <li>{$x}</li> } </ul>
+
+linux3[12]% cat xqg.xq
+<ul> { for $x in doc("bookstore.xml")/bookstore/book/title order by $x return <li>{data($x)}</li> } </ul>
+
+linux3[13]% cat xqh.xq
+for $x in doc("bookstore.xml")/bookstore/book return if ($x/@category="CHILDREN")
+then <child>{data($x/title)}</child> else <adult>{data($x/title)}</adult>
+
+linux3[15]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqa.xq
+<?xml version="1.0" encoding="UTF-8"?><title lang="en">Everyday Italian</title><title lang="en">Harry Potter</title><title lang="en">XQuery Kick Start</title><title lang="en">Learning XML</title><title lang="en">networks</title><title lang="en">algorithms</title><title lang="en">Database</title><title lang="en">English</title><title lang="en">English</title>linux3[16]%
+
+linux3[16]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqb.xq
+<?xml version="1.0" encoding="UTF-8"?><book category="CHILDREN">
+  <title lang="en">Harry Potter</title>
+  <author>J K. Rowling</author>
+  <year>2005</year>
+  <price>29.99</price>
+</book><book category="Networks and systems">
+  <title lang="en">networks</title>
+  <author>Balguruswamy</author>
+  <year>2005</year>
+  <price>19.99</price>
+</book><book category="Analysis and design">
+  <title lang="en">algorithms</title>
+  <author>Padmashree reddy</author>
+  <year>2007</year>
+  <price>9.99</price>
+</book><book category="OOPS">
+  <title lang="en">Database</title>
+  <author>Padmaguru shetty</author>
+  <year>2009</year>
+  <price>14.99</price>
+</book><book category="Physics">
+  <title lang="en">English</title>
+  <author>Padmaraman</author>
+  <year>2003</year>
+  <price>10.99</price>
+</book><book category="Mechanics">
+  <title lang="en">English</title>
+  <author>Raman</author>
+  <year>2008</year>
+  <price>18.99</price>
+</book>
+
+linux3[17]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqc.xq
+<?xml version="1.0" encoding="UTF-8"?><title lang="en">XQuery Kick Start</title><title lang="en">Learning XML</title>
+
+linux3[18]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqd.xq
+<?xml version="1.0" encoding="UTF-8"?><title lang="en">XQuery Kick Start</title><title lang="en">Learning XML</title>
+
+linux3[19]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqe.xq
+<?xml version="1.0" encoding="UTF-8"?><title lang="en">Learning XML</title><title lang="en">XQuery Kick Start</title>
+
+linux3[20]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqf.xq
+<?xml version="1.0" encoding="UTF-8"?><ul><li><title lang="en">Database</title></li><li><title lang="en">English</title></li><li><title lang="en">English</title></li><li><title lang="en">Everyday Italian</title></li><li><title lang="en">Harry Potter</title></li><li><title lang="en">Learning XML</title></li><li><title lang="en">XQuery Kick Start</title></li><li><title lang="en">algorithms</title></li><li><title lang="en">networks</title></li></ul>
+
+linux3[21]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqg.xq
+<?xml version="1.0" encoding="UTF-8"?><ul><li>Database</li><li>English</li><li>English</li><li>Everyday Italian</li><li>Harry Potter</li><li>Learning XML</li><li>XQuery Kick Start</li><li>algorithms</li><li>networks</li></ul>
+
+linux3[22]% java -cp saxon9he.jar net.sf.saxon.Query -q:xqh.xq
+<?xml version="1.0" encoding="UTF-8"?><adult>Everyday Italian</adult><child>Harry Potter</child><adult>XQuery Kick Start</adult><adult>Learning XML</adult><adult>networks</adult><adult>algorithms</adult><adult>Database</adult><adult>English</adult><adult>English</adult>
+
+

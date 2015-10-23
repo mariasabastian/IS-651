@@ -1,0 +1,205 @@
+<b>OK:</b> Found an XML parser. <br />
+<b>OK:</b>  Support for GZIP encoding.<br />
+<b>Warning:</b>  No support for iconv (--with-iconv) or multi-byte strings (--enable-mbstring).No support character set munging.<br />
+<br />
+<b>Warning</b>:  Cache couldn't make dir './cache'. in <b>/afs/umbc.edu/users/m/a/mariaps1/pub/www/is651/12109/HW11/magpie/rss_cache.inc</b> on line <b>185</b><br />
+<br />
+<b>Warning</b>:  MagpieRSS [debug] Cache couldn't make dir './cache'. in <b>/afs/umbc.edu/users/m/a/mariaps1/pub/www/is651/12109/HW11/magpie/rss_fetch.inc</b> on line <b>243</b><br />
+<br />
+<b>Notice</b>:  MagpieRSS [debug] Cache doesn't contain: http://magpierss.sf.net/test.rssUTF-8 (cache file: ./cache/b182bf30267adb49a6d3f81da2f18c37) in <b>/afs/umbc.edu/users/m/a/mariaps1/pub/www/is651/12109/HW11/magpie/rss_cache.inc</b> on line <b>185</b><br />
+<br />
+<b>Notice</b>:  MagpieRSS [debug] Cache doesn't contain: http://magpierss.sf.net/test.rssUTF-8 (cache file: ./cache/b182bf30267adb49a6d3f81da2f18c37) in <b>/afs/umbc.edu/users/m/a/mariaps1/pub/www/is651/12109/HW11/magpie/rss_cache.inc</b> on line <b>185</b><br />
+<br />
+<b>Warning</b>:  Cache unable to open file for writing: ./cache/b182bf30267adb49a6d3f81da2f18c37 in <b>/afs/umbc.edu/users/m/a/mariaps1/pub/www/is651/12109/HW11/magpie/rss_cache.inc</b> on line <b>185</b><br />
+<h3>Example Output</h3>Channel: MagpieRSS - PHP RSS Parser<p><ul><li><a href=http://laughingmeme.org/archives/002569.html?rss>MagpieRSS 0.7</a></li><li><a href=http://laughingmeme.org/archives/002491.html?rss>Magpie Blog Re-Invented</a></li></ul>
+<form>
+	RSS URL: <input type="text" size="30" name="url" value="http://magpierss.sf.net/test.rss"><br />
+	<input type="submit" value="Parse RSS">
+</form>
+
+<h3>Parsed Results (var_dump'ed)</h3>
+<pre>
+object(magpierss)(24) {
+  ["parser"]=>
+  resource(8) of type (Unknown)
+  ["current_item"]=>
+  array(0) {
+  }
+  ["items"]=>
+  array(2) {
+    [0]=>
+    array(9) {
+      ["about"]=>
+      string(44) "http://laughingmeme.org/archives/002569.html"
+      ["title"]=>
+      string(13) "MagpieRSS 0.7"
+      ["description"]=>
+      string(188) "Magpie 0.7 is <b>finally</b> out.  See <a href="http://laughingmeme.org/magpie_blog/?p=74">my post</a> on the <a href="http://laughingmeme.org/magpie_blog/">Magpie blog</a> for details...."
+      ["content"]=>
+      array(1) {
+        ["encoded"]=>
+        string(185) "Magpie 0.7 is <b>finally</b> out.  See <a href="http://laughingmeme.org/magpie_blog/?p=74">my post</a> on the <a href="http://laughingmeme.org/magpie_blog/">Magpie blog</a> for details."
+      }
+      ["link"]=>
+      string(48) "http://laughingmeme.org/archives/002569.html?rss"
+      ["dc"]=>
+      array(3) {
+        ["subject"]=>
+        string(6) "Magpie"
+        ["creator"]=>
+        string(6) "kellan"
+        ["date"]=>
+        string(25) "2004-11-21T23:56:17-08:00"
+      }
+      ["summary"]=>
+      string(188) "Magpie 0.7 is <b>finally</b> out.  See <a href="http://laughingmeme.org/magpie_blog/?p=74">my post</a> on the <a href="http://laughingmeme.org/magpie_blog/">Magpie blog</a> for details...."
+      ["atom_content"]=>
+      string(185) "Magpie 0.7 is <b>finally</b> out.  See <a href="http://laughingmeme.org/magpie_blog/?p=74">my post</a> on the <a href="http://laughingmeme.org/magpie_blog/">Magpie blog</a> for details."
+      ["date_timestamp"]=>
+      int(1101110160)
+    }
+    [1]=>
+    array(9) {
+      ["about"]=>
+      string(44) "http://laughingmeme.org/archives/002491.html"
+      ["title"]=>
+      string(23) "Magpie Blog Re-Invented"
+      ["description"]=>
+      string(572) "The Magpie Blog has been reborn as an actual blog, rather then just a couple of lines of PHP calling Magpie. While there was something poetic about the recursive nature of it all the form ended up being kind of limiting. It now is powered by Wordpress, and pulls in the Magpie related content from LaughingMeme (e.g. this very post), and from del.icio.us using my Wordpress aggregator hack. (version 0.02 is available, now with config file) Sourceforge stats box will be returning next time I need to procrastinate for a bit. And in honor of the occasion, I've post the..."
+      ["content"]=>
+      array(1) {
+        ["encoded"]=>
+        string(1206) "<p>The <a href="http://laughingmeme.org/magpie_blog">Magpie Blog</a> has been reborn as an actual blog, rather then just a couple of lines of PHP calling Magpie.  While there was something poetic about the recursive nature of it all the form ended up being kind of limiting.</p>
+
+<p>It now is powered by <a href="http://wordpress.org">Wordpress</a>, and pulls in the Magpie related content from <a href="http://laughingmeme.org">LaughingMeme</a> (e.g. this very post), and from del.icio.us using my <a href="http://laughingmeme.org/archives/002203.html">Wordpress aggregator hack</a>. (version 0.02 is available, now with config file)</p>
+
+<p>Sourceforge stats box will be returning next time I need to procrastinate for a bit.</p>
+
+<p>And in honor of the occasion, I've post the first bit of original content over there, <a href="http://laughingmeme.org/magpie_blog/?p=61">Aggregate and Collate with Magpie</a>.  Also if someone feels they have a good related tip or essay, I'd be happy to either post it, or hand out a guest author accounts.</p>
+
+<p>(p.s. this is largely instead of the rumored LM relaunch, which turned out to be entirely too much work for the extremely limited free time currently)</p>"
+      }
+      ["link"]=>
+      string(48) "http://laughingmeme.org/archives/002491.html?rss"
+      ["dc"]=>
+      array(3) {
+        ["subject"]=>
+        string(6) "Magpie"
+        ["creator"]=>
+        string(6) "kellan"
+        ["date"]=>
+        string(25) "2004-10-25T22:22:40-08:00"
+      }
+      ["summary"]=>
+      string(572) "The Magpie Blog has been reborn as an actual blog, rather then just a couple of lines of PHP calling Magpie. While there was something poetic about the recursive nature of it all the form ended up being kind of limiting. It now is powered by Wordpress, and pulls in the Magpie related content from LaughingMeme (e.g. this very post), and from del.icio.us using my Wordpress aggregator hack. (version 0.02 is available, now with config file) Sourceforge stats box will be returning next time I need to procrastinate for a bit. And in honor of the occasion, I've post the..."
+      ["atom_content"]=>
+      string(1206) "<p>The <a href="http://laughingmeme.org/magpie_blog">Magpie Blog</a> has been reborn as an actual blog, rather then just a couple of lines of PHP calling Magpie.  While there was something poetic about the recursive nature of it all the form ended up being kind of limiting.</p>
+
+<p>It now is powered by <a href="http://wordpress.org">Wordpress</a>, and pulls in the Magpie related content from <a href="http://laughingmeme.org">LaughingMeme</a> (e.g. this very post), and from del.icio.us using my <a href="http://laughingmeme.org/archives/002203.html">Wordpress aggregator hack</a>. (version 0.02 is available, now with config file)</p>
+
+<p>Sourceforge stats box will be returning next time I need to procrastinate for a bit.</p>
+
+<p>And in honor of the occasion, I've post the first bit of original content over there, <a href="http://laughingmeme.org/magpie_blog/?p=61">Aggregate and Collate with Magpie</a>.  Also if someone feels they have a good related tip or essay, I'd be happy to either post it, or hand out a guest author accounts.</p>
+
+<p>(p.s. this is largely instead of the rumored LM relaunch, which turned out to be entirely too much work for the extremely limited free time currently)</p>"
+      ["date_timestamp"]=>
+      int(1098771720)
+    }
+  }
+  ["channel"]=>
+  array(7) {
+    ["title"]=>
+    string(26) "MagpieRSS - PHP RSS Parser"
+    ["link"]=>
+    string(32) "http://magpierss.sourceforge.net"
+    ["description"]=>
+    string(36) "News on MagpieRSS, a PHP RSS toolkit"
+    ["dc"]=>
+    array(3) {
+      ["language"]=>
+      string(5) "en-us"
+      ["creator"]=>
+      string(6) "kellan"
+      ["date"]=>
+      string(25) "2004-12-14T12:55:07-08:00"
+    }
+    ["items"]=>
+    string(2) "
+
+"
+    ["items_seq"]=>
+    string(3) "
+
+
+"
+    ["tagline"]=>
+    string(36) "News on MagpieRSS, a PHP RSS toolkit"
+  }
+  ["textinput"]=>
+  array(0) {
+  }
+  ["image"]=>
+  array(0) {
+  }
+  ["feed_type"]=>
+  string(3) "RSS"
+  ["feed_version"]=>
+  string(3) "1.0"
+  ["encoding"]=>
+  string(5) "UTF-8"
+  ["_source_encoding"]=>
+  string(0) ""
+  ["ERROR"]=>
+  string(0) ""
+  ["WARNING"]=>
+  string(0) ""
+  ["_CONTENT_CONSTRUCTS"]=>
+  array(6) {
+    [0]=>
+    string(7) "content"
+    [1]=>
+    string(7) "summary"
+    [2]=>
+    string(4) "info"
+    [3]=>
+    string(5) "title"
+    [4]=>
+    string(7) "tagline"
+    [5]=>
+    string(9) "copyright"
+  }
+  ["_KNOWN_ENCODINGS"]=>
+  array(3) {
+    [0]=>
+    string(5) "UTF-8"
+    [1]=>
+    string(8) "US-ASCII"
+    [2]=>
+    string(10) "ISO-8859-1"
+  }
+  ["stack"]=>
+  array(0) {
+  }
+  ["inchannel"]=>
+  bool(false)
+  ["initem"]=>
+  bool(false)
+  ["incontent"]=>
+  bool(false)
+  ["intextinput"]=>
+  bool(false)
+  ["inimage"]=>
+  bool(false)
+  ["current_namespace"]=>
+  bool(false)
+  ["source_encoding"]=>
+  string(10) "ISO-8859-1"
+  ["last_modified"]=>
+  string(31) "Thu, 16 Dec 2004 00:04:35 GMT
+"
+  ["etag"]=>
+  string(21) ""f11-3eb5066382ac0"
+"
+}
+</pre>
+

@@ -1,0 +1,48 @@
+ Server: studentdb.gl.umbc.edu     Database: mariaps1     Table: maria
+Browse
+Structure
+SQL
+Search
+Insert
+Export
+Import
+Operations
+Empty
+Drop
+
+Table maria has been created.SQL query:
+CREATE TABLE  `maria` (
+ `FIRST NAME` VARCHAR( 15 ) NOT NULL ,
+ `LAST NAME` VARCHAR( 15 ) NOT NULL ,
+ `AGE` INT( 3 ) NOT NULL ,
+ `ADDRESS` VARCHAR( 30 ) NOT NULL ,
+ `PHONE NUMBER` INT( 10 ) NOT NULL ,
+UNIQUE (
+`FIRST NAME` ,
+`LAST NAME`
+)
+) ENGINE = INNODB;
+
+[ Edit ] [ Create PHP Code ]
+
+
+Field	Type	Collation	Attributes	Null	Default	Extra	Action
+	FIRST NAME	varchar(15)	latin1_swedish_ci		No			 	 	 	 	 	 	
+	LAST NAME	varchar(15)	latin1_swedish_ci		No			 	 	 	 	 	 	
+	AGE	int(3)			No			 	 	 	 	 	 	
+	ADDRESS	varchar(30)	latin1_swedish_ci		No			 	 	 	 	 	 	
+	PHONE NUMBER	int(10)			No			 	 	 	 	 	 	  Check All / Uncheck All With selected:       
+Print view  Propose table structure 
+ Add  field(s)At End of Table At Beginning of Table After  
+Indexes:  
+Keyname	Type	Cardinality	Action	Field
+FIRST NAME	 UNIQUE	 0 			 FIRST NAME
+LAST NAME
+Create an index on  columns  
+Space usage
+Type	Usage
+Data	0	B
+Index	0	B
+Total	0	B
+Row Statistics
+Statements	Value

@@ -1,0 +1,387 @@
+1) WEATHER : http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL 
+
+Response:
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetCityForecastByZIPResponse xmlns="http://ws.cdyne.com/WeatherWS/">
+         <GetCityForecastByZIPResult>
+            <Success>true</Success>
+            <ResponseText>City Found</ResponseText>
+            <State>MD</State>
+            <City>Halethorpe</City>
+            <WeatherStationCity>Baltimore</WeatherStationCity>
+            <ForecastResult>
+               <Forecast>
+                  <Date>2011-10-08T00:00:00</Date>
+                  <WeatherID>4</WeatherID>
+                  <Desciption>Sunny</Desciption>
+                  <Temperatures>
+                     <MorningLow>48</MorningLow>
+                     <DaytimeHigh>78</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>00</Nighttime>
+                     <Daytime>00</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+               <Forecast>
+                  <Date>2011-10-09T00:00:00</Date>
+                  <WeatherID>4</WeatherID>
+                  <Desciption>Sunny</Desciption>
+                  <Temperatures>
+                     <MorningLow>50</MorningLow>
+                     <DaytimeHigh>83</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>00</Nighttime>
+                     <Daytime>00</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+               <Forecast>
+                  <Date>2011-10-10T00:00:00</Date>
+                  <WeatherID>4</WeatherID>
+                  <Desciption>Sunny</Desciption>
+                  <Temperatures>
+                     <MorningLow>53</MorningLow>
+                     <DaytimeHigh>82</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>00</Nighttime>
+                     <Daytime>00</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+               <Forecast>
+                  <Date>2011-10-11T00:00:00</Date>
+                  <WeatherID>2</WeatherID>
+                  <Desciption>Partly Cloudy</Desciption>
+                  <Temperatures>
+                     <MorningLow>57</MorningLow>
+                     <DaytimeHigh>78</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>10</Nighttime>
+                     <Daytime>10</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+               <Forecast>
+                  <Date>2011-10-12T00:00:00</Date>
+                  <WeatherID>6</WeatherID>
+                  <Desciption>Showers</Desciption>
+                  <Temperatures>
+                     <MorningLow>60</MorningLow>
+                     <DaytimeHigh>71</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>50</Nighttime>
+                     <Daytime>60</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+               <Forecast>
+                  <Date>2011-10-13T00:00:00</Date>
+                  <WeatherID>6</WeatherID>
+                  <Desciption>Showers</Desciption>
+                  <Temperatures>
+                     <MorningLow>61</MorningLow>
+                     <DaytimeHigh>69</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>60</Nighttime>
+                     <Daytime>50</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+               <Forecast>
+                  <Date>2011-10-14T00:00:00</Date>
+                  <WeatherID>2</WeatherID>
+                  <Desciption>Partly Cloudy</Desciption>
+                  <Temperatures>
+                     <MorningLow>59</MorningLow>
+                     <DaytimeHigh>70</DaytimeHigh>
+                  </Temperatures>
+                  <ProbabilityOfPrecipiation>
+                     <Nighttime>30</Nighttime>
+                     <Daytime>40</Daytime>
+                  </ProbabilityOfPrecipiation>
+               </Forecast>
+            </ForecastResult>
+         </GetCityForecastByZIPResult>
+      </GetCityForecastByZIPResponse>
+   </soap:Body>
+</soap:Envelope>
+
+2) Calculator : http://soaptest.parasoft.com/calculator.wsdl 
+
+Response:
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <n:addResponse xmlns:n="http://www.parasoft.com/wsdl/calculator/">
+         <n:Result xsi:type="xsd:float">9.0</n:Result>
+      </n:addResponse>
+   </soap:Body>
+</soap:Envelope>
+
+3)Global Weather(cities by country) : http://www.webservicex.com/globalweather.asmx?WSDL 
+
+Response:
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetCitiesByCountryResponse xmlns="http://www.webserviceX.NET">
+         <GetCitiesByCountryResult><![CDATA[<NewDataSet>
+  <Table>
+    <Country>British Indian Ocean Territory</Country>
+    <City>Diego Garcia</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Ahmadabad</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Akola</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Aurangabad Chikalthan Aerodrome</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bombay / Santacruz</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bilaspur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bhuj-Rudramata</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Belgaum / Sambra</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bhopal / Bairagarh</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bhaunagar</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Goa / Dabolim Airport</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Indore</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Jabalpur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Khandwa</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Kolhapur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Nagpur Sonegaon</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Rajkot</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Sholapur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Agartala</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Siliguri</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bhubaneswar</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Calcutta / Dum Dum</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Car Nicobar</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Gorakhpur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Gauhati</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Gaya</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Imphal Tulihal</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Jharsuguda</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Jamshedpur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>North Lakhimpur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Dibrugarh / Mohanbari</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Port Blair</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Patna</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>M. O. Ranchi</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Agra</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Allahabad / Bamhrauli</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Amritsar</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Varanasi / Babatpur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bareilly</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Kanpur / Chakeri</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>New Delhi / Safdarjung</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>New Delhi / Palam</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Gwalior</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Hissar</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Jhansi</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Jodhpur</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Jaipur / Sanganer</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Kota Aerodrome</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Lucknow / Amausi</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Satna</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Udaipur Dabok</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Bellary</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Vijayawada / Gannavaram</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Coimbatore / Peelamedu</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Cochin / Willingdon</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Cuddapah</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Hyderabad Airport</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Madurai</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Mangalore / Bajpe</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Madras / Minambakkam</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Tiruchchirapalli</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Thiruvananthapuram</City>
+  </Table>
+  <Table>
+    <Country>India</Country>
+    <City>Vellore</City>
+  </Table>
+</NewDataSet>]]></GetCitiesByCountryResult>
+      </GetCitiesByCountryResponse>
+   </soap:Body>
+</soap:Envelope>

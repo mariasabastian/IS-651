@@ -1,0 +1,15 @@
+Schema validating with XSV 3.1-1 of 2007/12/11 16:20:05
+
+Target: http://userpages.umbc.edu/~mariaps1/smp.xml
+   (Real name: http://userpages.umbc.edu/~mariaps1/smp.xml
+    Length: 1767 bytes 
+    Last Modified: Mon, 25 Feb 2013 03:18:51 GMT
+    Server: Apache/1.3.33 (Unix) mod_fastcgi/2.4.2 PHP/4.3.10 mod_perl/1.29 mod_ssl/2.8.22 OpenSSL/0.9.7d)
+docElt: {http://userpages.umbc.edu/~mariaps1}HW2
+Validation was strict, starting with type [Anonymous]
+schemaLocs: http://userpages.umbc.edu/~mariaps1 -> smp.xsd
+The schema(s) used for schema-validation had no errors
+No schema-validity problems were found in the target
+Schema resources involved
+
+Attempt to load a schema document from http://userpages.umbc.edu/~mariaps1/smp.xsd (source: schemaLoc) for http://userpages.umbc.edu/~mariaps1, succeeded

@@ -1,0 +1,14 @@
+
+<html><head><title>Pick a Color</title></head>
+<body>
+<b>Pick a Color:</b><br>
+
+<form action="colors4.cgi" method="POST">
+<input type="radio" name="color" value="red"> Red<br>
+<input type="radio" name="color" value="green"> Green<br>
+<input type="radio" name="color" value="blue"> Blue<br>
+<input type="radio" name="color" value="aqua"> Aqua<br>
+<input type="submit">
+</form>
+</body></html>
+

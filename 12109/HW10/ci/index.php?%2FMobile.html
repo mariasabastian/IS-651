@@ -1,0 +1,26 @@
+" This web service gives you an output when the product ID and Quantity is feed for buying mobiles. 
+Soap client calls the web service 'http://userpages.umbc.edu/~mariap1/is651/12109/HW10/Mobile.php?wsdl' and gives us the required output."
+
+<html>
+<head>
+<title>Online Mobile Shop</title>
+</head>
+<body>
+<h1>Select from available Mobile</h1>
+
+<table border="1">
+<tr><th>ID</th><th>Mobile</th><th>Price</th></tr>
+<tr><td>prod1</td><td>Nokia</td><td>6000</td></tr>
+<tr><td>prod2</td><td>Samsung</td><td>6000</td></tr>
+<tr><td>prod3</td><td>iPad</td><td>3500</td></tr>
+<tr><td>prod4</td><td>Nexus</td><td>3500</td></tr>
+<tr><td>prod5</td><td>Motorola</td><td>2500</td></tr>
+</table>
+<br/>
+
+<form action="../any.php.html" method="POST">
+Mobile: <input type="text" size="12" name="Mobile" />
+Quantity: <input type="int" size="12" name="quant" />
+<input type="submit" />
+
+</body>
